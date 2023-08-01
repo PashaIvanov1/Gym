@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #fff;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            background-color: #fff;
+            padding: 20px 0;
+        }
+
+        footer {
+            background-color: #f7f7f7;
+            position: fixed;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            color: #666;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo-container img {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.6);
+            border-radius: 50px;
+        }
+
+        .form-container label {
+            display: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-container img:first-child {
+            margin-right: 100px;
+        }
+
+        .circle-animation {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+            100% {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+
+        .left-image {
+            left: 200px;
+        }
+
+        .right-image {
+            right: 200px;
+        }
+
+        .logo-text {
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+
+        }
+
+        .logo-text span {
+            font-size: 19em;
+        }
+
+        .marquee {
+            background-color: #484848;
+            color: #fff;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .marquee-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            animation: colorChange 5s linear infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: blue;
+                text-shadow: none;
+            }
+            50% {
+                color: purple;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            }
+            100% {
+                color: red;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .btn-registration {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+<img src="https://www.all4gym.ru/images/preim/8.jpg" class="circle-animation left-image">
+<img src="https://way4you.ua/img/product/7f/7fdb2b17d3b30ec505745522bf9dd656/ganteli-hromirovannye-2-sht-po-20-kg-original-95-1.jpg"
+     class="circle-animation right-image">
+</div>
+<div class="marquee">
+    <marquee behavior="scroll" direction="left">
+        <span class="marquee-text">ATLANT - Number one gym, you won't recognize yourself in 3 months</span>
+    </marquee>
+</div>
+<div class="header-container">
+    <div class="container">
+        <header>
+            <div class="container-header">
+                <a class="logo-container">
+                    <img src="https://img.freepik.com/premium-vector/gym-logo_219982-7.jpg?w=2000" alt="images">
+                    <span class="fs-4">ATLANT - Number one gym</span>
+                    <img src="https://img.freepik.com/premium-vector/gym-logo_219982-7.jpg?w=2000" alt="images">
+                </a>
+            </div>
+        </header>
+    </div>
+</div>
+<div class="form-container">
+    <form class="form-signin" method="post" action="/login">
+        <p>
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Name"
+                   required="" autofocus="">
+        </p>
+        <p>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                   required="">
+            <small class="text-danger" th:if="${param.error}">Invalid name or password</small>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    </form>
+</div>
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/FAQs" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2023 Atlant. All rights reserved</p>
+</footer>
+
+</body>
+</html>

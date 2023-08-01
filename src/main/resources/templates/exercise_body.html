@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise Management</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Exercise Management</h1>
+
+  <h2>Get Exercises</h2>
+  <form id="getExercisesForm">
+    <div class="form-group">
+      <label for="muscleGroupSelect">Muscle Group:</label>
+      <select class="form-control" id="muscleGroupSelect" name="muscleGroup" required>
+        <option value="Shoulders">Shoulders</option>
+        <option value="Chest">Chest</option>
+        <option value="Biceps">Biceps</option>
+        <option value="Abs">Abs</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="difficultyLevelSelect">Difficulty Level:</label>
+      <select class="form-control" id="difficultyLevelSelect" name="difficultyLevel" required>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+    <p class="my-3">
+      <button type="submit" class="btn btn-primary">Get Exercises</button>
+    </p>
+  </form>
+
+  <hr>
+
+  <div id="exercisesContainer"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $("#getExercisesForm").submit(function(event) {
+    event.preventDefault();
+    var muscleGroup = $("#muscleGroupSelect").val();
+    var difficultyLevel = $("#difficultyLevelSelect").val();
+    console.log(muscleGroup)
+    console.log(difficultyLevel)
+    $.ajax({
+      url: "/exercises/",
+      type: "GET",
+      data: {
+        muscleGroup: muscleGroup,
+        difficultyLevel: difficultyLevel
+      },
+      dataType: "json",
+      success: function(response) {
+        const exercisesContainer = $("#exercisesContainer");
+        exercisesContainer.empty();
+        const exercisesList = $("<ul>");
+        $.each(response, function(index, exercise) {
+          var exerciseItem = $("<li>").text(exercise.exerciseName);
+          exercisesList.append(exerciseItem);
+        });
+        exercisesContainer.append(exercisesList);
+      },
+      error: function(xhr) {
+        alert("Error getting exercises: " + xhr.responseText);
+      }
+    });
+  });
+</script>
+<div class="container text-center">
+  <a href="success" class="btn btn-primary">Back</a>
+</div>
+</body>
+</html>
+

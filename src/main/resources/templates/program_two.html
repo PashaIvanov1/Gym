@@ -1,0 +1,140 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        nav.container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        nav.container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        nav.container h3 {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        nav.container img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        nav.container p {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .nav-item a.nav-link {
+            color: black !important;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-item a.nav-link::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: #ff00ff;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-item a.nav-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    </style>
+
+    <nav class="container">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/success" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="/user/one" class="nav-link px-2 text-body-secondary">Day 1</a></li>
+            <li class="nav-item"><a href="/user/three" class="nav-link px-2 text-body-secondary">Day 3</a></li>
+        </ul>
+    </nav>
+    <title>Day 2</title>
+</head>
+<body>
+<nav class="container">
+    <h1>Day 2: Shoulders, Triceps, Trapezius</h1>
+    <h3>1. Bench Dips</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/otjimaniya-na-triceps-900x600.jpg" alt="img">
+
+    <p>
+        This exercise targets the middle deltoid muscles. Use moderate dumbbell weights and maintain a stable body position. Keep your back straight and avoid bending your arms. Lift the weights to the horizontal position. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>2. Lateral Raises</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/podyemy-ganteley-v-storony-900x600.jpg" alt="img1">
+    <p>
+        This exercise is performed with a moderate working weight, focusing on proper technique and engaging the chest muscles. Try to contract your chest inward as much as possible, with your arms extended forward but without fixing your elbows. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>3. Front Raises</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/poperemennie-podyemy-900x600.jpg" alt="img2">
+    <p>
+        This exercise targets the front deltoid muscles. Use moderate dumbbell weights and focus on proper technique. Start lifting your arm only when the opposite arm is in the bottom position of the movement. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>4. Seated Dumbbell Press</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/jim-ganteley-sidya-900x600.jpg" alt="img3">
+
+    <p>
+        This is a basic exercise for the shoulder muscles. It can be performed with dumbbells (either seated or standing) or with a barbell, such as the standing barbell press. Keep your abs engaged during the movement and avoid using your body's momentum to lift the weight. Only your shoulders should be working. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>5. Tricep Extensions</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/obratnie-razgibaniya-na-triceps-900x600.jpg" alt="img4">
+
+    <p>
+        This exercise targets the medial head of the triceps, adding volume to the muscle. It can be performed with dumbbells on a bench or with a cable machine (with the body strictly perpendicular to the ground). Perform slow movements, and contract the triceps even harder at the final point of the movement. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>6. Overhead Tricep Press</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/jim-na-triceps-iz-za-golovy-900x600.jpg" alt="img5">
+
+    <p>
+        This is a key exercise for tricep development. It can be performed seated or lying on a bench with an EZ-bar. Keep your elbows parallel and avoid flaring them out during the movement. This exercise can be substituted with another tricep exercise. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>7. Lateral Raises</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/razvedeniya-cherez-storony-900x600.jpg" alt="img6">
+
+    <p>
+        This exercise targets the trapezius and middle deltoid muscles. When lifting the dumbbells, slightly bend your elbows and move in a semicircular motion. Make sure your lower back doesn't arch. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>8. Dumbbell Shrugs</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/ganteli-k-podborodku-900x600.jpg" alt="img7">
+
+    <p>
+        This exercise targets the trapezius and deltoid muscles, giving the shoulders a rounded shape. When lifting, avoid lifting the dumbbells too high—strictly lift them to the parallel line. Perform the exercise slowly, engaging as many muscle fibers as possible. 2-3 sets of 12-15 repetitions.
+    </p>
+
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+
+        body {
+            background-color: #333;
+        }
+
+        nav.container {
+            background-color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        nav.container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        nav.container h3 {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        nav.container img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        nav.container p {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .nav-item a.nav-link {
+            color: black !important;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-item a.nav-link::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: #ff00ff;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-item a.nav-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    </style>
+
+    <nav class="container">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/success" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="/user/two" class="nav-link px-2 text-body-secondary">Day 2</a></li>
+        </ul>
+    </nav>
+
+    <title>Day 1</title>
+</head>
+<body>
+
+<nav class="container">
+    <h1>Day 1: Chest, Biceps, Legs</h1>
+    <h3>1. Push-ups</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/otjimaniya-1-900x600.jpg" alt="img">
+
+    <p>
+        This exercise is for warming up and preparing the chest muscles for the workout. Vary different hand placements and widths, and you can also use an elevated surface for added difficulty. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>2. Chest Flyes</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/svedeniya-na-grud-900x600.jpg" alt="img1">
+    <p>
+        This exercise is performed with a moderate working weight, focusing on proper technique and feeling the engagement of the chest muscles. Try to contract and squeeze your chest inward while keeping your arms extended forward without locking the elbows. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>3. Barbell Bench Press</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/jim-shtangi-leja-900x600.jpg" alt="img2">
+    <p>
+        This is a fundamental exercise for the chest muscles. It can be performed with a barbell or on a bench press machine. When performing on a flat bench, avoid lifting your feet off the ground. Optionally, you can vary the bench incline every week. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>4. Barbell Bicep Curls</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/shtanga-na-biceps-900x600.jpg" alt="img3">
+
+    <p>
+        This is a key exercise for developing the biceps muscles. Use a moderate weight that allows you to perform up to 15 repetitions. Avoid swinging during the curl and keep your elbows in a fixed position. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>5. Concentration Curls</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/podyem-na-biceps-1-900x600.jpg" alt="img4">
+
+    <p>
+        Pay attention to feeling the work in your biceps throughout the exercise. By slightly twisting the dumbbell, you engage the inner part of the biceps, which adds volume to the main muscle. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>6. Barbell Squats</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/prisedaniya-so-shtangoy-900x600.jpg" alt="img5">
+
+    <p>
+        This is a basic exercise for the leg muscles. It can be performed with a barbell or on a leg press machine. Maintain conscious tension in your core and lower yourself until your thighs are parallel to the ground. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>7. Leg Extensions</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/razgibaniya-nog-v-trenajere-900x600.jpg" alt="img6">
+
+    <p>
+        This exercise targets the front surface of the thighs. Make sure to keep your core engaged throughout the movement and avoid using your body to lift the weight. It can be substituted with any other leg exercise. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>8. Lunges</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/vypady-900x600.jpg" alt="img7">
+
+    <p>
+        This exercise targets the gluteus medius muscle. It can be performed with bodyweight or dumbbells. Optionally, it can be replaced with any other glute exercise. 2-3 sets of 12-15 repetitions.
+    </p>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

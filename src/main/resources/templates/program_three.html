@@ -1,0 +1,139 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        nav.container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        nav.container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        nav.container h3 {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        nav.container img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        nav.container p {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .nav-item a.nav-link {
+            color: black !important;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-item a.nav-link::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: #ff00ff;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-item a.nav-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    </style>
+
+    <nav class="container">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/success" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="/user/two" class="nav-link px-2 text-body-secondary">Day 2</a></li>
+        </ul>
+    </nav>
+    <title>Day 3</title>
+</head>
+<body>
+<nav class="container">
+    <h1>Day 3: Back and Abs</h1>
+    <h3>1. Pull-ups</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/podtyagivaniya-1-900x600.jpg" alt="img">
+
+    <p>
+        This exercise is for warming up the latissimus dorsi muscles. Keep your core engaged throughout the movement and feel the engagement of your back muscles as you pull your body upward. Avoid swinging. 2-3 sets of 12-15 repetitions.
+    </p>
+
+    <h3>2. Lat Pulldowns</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/tyaga-verhnego-bloka-1-900x600.jpg" alt="img1">
+    <p>
+        This exercise allows you to perform a similar movement to pull-ups with added resistance. You can use different handles and grips to target different back muscles. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>3. Dumbbell Rows</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/tyaga-ganteli-k-poyasu-900x600.jpg" alt="img2">
+    <p>
+        This exercise targets the thickness of the back muscles. The goal is to engage the latissimus dorsi muscles rather than relying solely on the arm muscles to lift the dumbbell. Keep your spine straight and avoid excessive arching. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>4. Cable Pulldowns</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/tyaga-nijnego-bloka-900x600.jpg" alt="img3">
+
+    <p>
+        If you have access to a cable machine, perform full-range cable pulldowns. Otherwise, you can substitute this exercise with cable pulldowns to the waist. 3-4 sets of 7-10 repetitions.
+    </p>
+
+    <h3>5. Bicycle Crunches</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/uprajnenie-velosiped-900x600.jpg" alt="img4">
+
+    <p>
+        This exercise targets the oblique muscles of the abdomen. Bend your leg at the knee and bring the opposite elbow toward it. Maintain tension in your core and feel the engagement of your abdominal muscles. 3-4 sets of 10-15 repetitions.
+    </p>
+
+    <h3>6. Bench Crunches</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/skruchivaniya-na-skamye-900x600.jpg" alt="img5">
+
+    <p>
+        This exercise focuses on the rectus abdominis muscles. Avoid holding your breath during the upward movement and make sure the load doesn't shift to your lower back. Contract your abs even harder at the top position. 3-4 sets of 10-15 repetitions.
+    </p>
+
+    <h3>7. Plank</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2019/09/uprajnenie-planka-900x600.jpg" alt="img6">
+
+    <p>
+        The plank is an essential static exercise for the abs, targeting the internal and transverse abdominal muscles. Perform planks in various positions (on elbows, extended arms, side planks). Aim for 3-4 sets lasting 60-90 seconds each.
+    </p>
+
+    <h3>8. Hyperextensions</h3>
+    <img src="https://fitseven.ru/wp-content/uploads/2018/11/hyperextensiya-900x600.jpg" alt="img7">
+
+    <p>
+        This exercise strengthens the lower back and lumbar region. It can be performed dynamically or statically. When lifting, be careful not to arch your spine too much. 2-3 sets of 10-15 repetitions.
+    </p>
+</nav>
+</p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

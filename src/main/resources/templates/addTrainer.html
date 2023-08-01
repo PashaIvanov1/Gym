@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Add Trainer</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous">
+
+<div class="container text-center">
+  <div><h1>Add Trainer</h1></div>
+  <form action="#" th:action="@{/trainer/add}"
+        th:object="${trainerDTO}"
+        method="post">
+    <div class="row">
+
+      <div class="form-group col-md-6">
+        <label for="firstName" class="col-form-label">First Name</label>
+        <input type="text" th:field="*{firstName}" class="form-control" id="firstName" placeholder="First Name">
+        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="error-message"></span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="lastName" class="col-form-label">Last Name</label>
+        <input type="text" th:field="*{lastName}" class="form-control" id="lastName" placeholder="Last Name">
+        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error-message"></span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="description" class="col-form-label">Description</label>
+        <input type="text" th:field="*{description}" class="form-control" id="description" placeholder="Description">
+        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="error-message"></span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="phoneNumber" class="col-form-label">Phone Number</label>
+        <input type="number" th:field="*{phoneNumber}" class="form-control" id="phoneNumber" placeholder="Phone Number">
+        <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="error-message"></span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="experienceYears" class="col-form-label">Experience Years</label>
+        <input type="text" th:field="*{experienceYears}" class="form-control" id="experienceYears" placeholder="Experience Years">
+        <span th:if="${#fields.hasErrors('experienceYears')}" th:errors="*{experienceYears}" class="error-message"></span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="email" class="col-form-label">Email</label>
+        <input type="email" th:field="*{email}" class="form-control" id="email" placeholder="Email">
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-message"></span>
+        <span th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></span>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="age" class="col-form-label">Age</label>
+        <input type="number" th:field="*{age}" class="form-control" id="age" placeholder="Age">
+        <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="gym">Gym:</label>
+        <select id="gym" name="gymId" class="form-control" th:field="*{gymId}">
+          <option th:each="gym : ${gyms}" th:value="${gym.id}" th:text="${gym.city + ', ' + gym.street}"></option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <input type="submit" class="btn btn-primary" value="Save">
+      </div>
+    </div>
+  </form>
+  <p class="my-3"><a href="/trainer/all/" button type="button" class="btn btn-primary btn-neon">Back</button></a></p>
+</div>
+</body>
+</html>

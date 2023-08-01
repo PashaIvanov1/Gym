@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise List</title>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+  <div class="d-flex justify-content-between">
+    <p class="my-3">
+      <a href="/exercises">
+        <button type="button" class="btn btn-primary">Exercise</button>
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Exercise List</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>ExerciseName</th>
+      <th>Muscle Group</th>
+      <th>Difficulty Level</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="exercise : ${exercises}">
+      <td th:text="${exercise.exerciseName}"></td>
+      <td th:text="${exercise.muscleGroup}"></td>
+      <td th:text="${exercise.difficultyLevel}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
